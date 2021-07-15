@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Students Wrapper -->
+
+    <students-wrapper>
+      <!-- Page title -->
+      <h1 class="title">Student's Catalogue</h1>
+      <!-- Small description -->
+      <div class="description">
+        <!-- Class name here -->
+        <p>
+          <b>Very important: </b>Please add the student's name below and press
+          "Add Student" button to update the student database.
+        </p>
+      </div>
+      <!-- Student input -->
+      <section class="input-section">
+        <!-- Class name here -->
+        <input type="text" placeholder="Jon Doe" id="nameInput" />
+        <button id="addStudent">
+          <i class="fas fa-user-plus"></i>&nbspAdd student
+        </button>
+      </section>
+      <!-- Sorting section -->
+      <section class="sorting-section">
+        <!-- Class name here -->
+        <button id="ascendingAssort">
+          <i class="fas fa-sort-alpha-up"></i>&nbspAscending Assort
+        </button>
+        <button id="descendingAssort">
+          <i class="fas fa-sort-alpha-down-alt"></i>&nbspDescending Assort
+        </button>
+      </section>
+      <!-- Student table -->
+      <section class="student-table">
+        <!-- Class name here -->
+        <table id="mainTable">
+          <!-- Must be *hidden* -->
+          <th class="student-name-table">Student name</th>
+          <th class="average-score-table">Average score</th>
+          <th class="grading-information-table">Grading information</th>
+          <th class="delete-student-table">Delete student</th>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+    </students-wrapper>
+    <!-- End of students Wrapper -->
+
+    <!-- Grades Wrapper -->
+
+    <grades-wrapper id="gradesWrapper" class="student-details-hidden">
+      <div class="description">
+        <p id="selectedStudent">Selected Student: Johny</p>
+      </div>
+      <div class="description">
+        <!-- Class name here -->
+        <p id="hidden">
+          <b>Tip: </b>To hide the grades section for any student press "Hide
+          Grades".
+        </p>
+      </div>
+      <!-- Class name here -->
+      <button class="button-grades" id="hideGrades">Hide Grades</button>
+      <section class="sorting-grade-section">
+        <!-- Class name here -->
+        <button id="ascendingGradeAssort">
+          <!-- Class name here -->
+          <i class="fas fa-sort-numeric-up"></i>&nbspAscending Assort
+        </button>
+        <button id="descendingGradeAssort">
+          <i class="fas fa-sort-numeric-up-alt"></i>&nbspDescending Assort
+        </button>
+      </section>
+      <div class="description">
+        <!-- Class name here -->
+        <p id="hidden">
+          <b>Very important: </b>Please add the student's grade below and press
+          "Add Grade" button to update the student database.
+        </p>
+      </div>
+      <!-- Student Details -->
+      <div class="grade-table">
+        <input type="number" id="gradeInput" />
+        <button id="addGrade"><i class="fas fa-plus"></i>&nbspAdd grade</button>
+      </div>
+
+      <!-- Grade table Details -->
+      <section class="grade-table">
+        <!-- Class name here -->
+        <table id="gradeTable">
+          <!-- Must be *hidden* -->
+          <th class="grade-table">Grade</th>
+          <th class="grading-information-table">Remove grade</th>
+          <tbody id="secondTableBody"></tbody>
+        </table>
+      </section>
+    </grades-wrapper>
+    <!-- End of grades Wrapper -->
+
+    <!-- Scripts import -->
+    <script src="./script.js"></script>
+  </body>
+</html>
